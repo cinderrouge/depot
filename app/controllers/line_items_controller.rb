@@ -1,4 +1,5 @@
 class LineItemsController < ApplicationController
+  skip_before_action :authorize, only: :create
   include CurrentCart
   before_action :set_cart, only: [:create]
   before_action :set_line_item, only: [:show, :edit, :update, :destroy]
@@ -26,9 +27,9 @@ class LineItemsController < ApplicationController
   # POST /line_items
   # POST /line_items.json
   def create
-    @cart = current_cart
+    #@cart = current_cart
     product = Product.find(params[:product_id])
-     @line_item = @cart.add_product(product)
+     @line_item = @cart.add_product(product.id)
     #@line_item = LineItem.new(params[:line_item])
 
     respond_to do |format|
@@ -44,7 +45,6 @@ class LineItemsController < ApplicationController
       end
     end
   end
-
   # PATCH/PUT /line_items/1
   # PATCH/PUT /line_items/1.json
   def update
@@ -69,13 +69,14 @@ class LineItemsController < ApplicationController
     end
   end
 
+private
     # Use callbacks to share common setup or constraints between actions.
     def set_line_item
       @line_item = LineItem.find(params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
-    def line_item_params
+    def line_iterhm_params
       params.require(:line_item).permit(:product_id)
     end
 end
