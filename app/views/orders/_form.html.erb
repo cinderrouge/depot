@@ -13,7 +13,7 @@
     </div>
   <% end %>
 <!-- ... -->
-
+<fieldset id="login_form">
   <div class="field">
     <%= f.label :name, t('.name') %><br>
     <%= f.text_field :name, size: 40 %>
@@ -34,4 +34,5 @@
   <div class="actions">
     <%= f.submit t('.submit') %>
   </div>
+</fieldset>
 <% end %>

@@ -50,3 +50,37 @@ Product.create(title: 'Rails Test Prescriptions',
       </p>},
   image_url: 'rtp.jpg',
   price: 34.95)
+  # . . .
+
+Product.create(title: 'Ruby Performance Optimization',
+  description:
+      %{<p>
+          <em>Ruby Performance Optimization</em> See exactly what makes Ruby
+          and Rails code slow, and how to fix it.
+        </p>},
+  image_url: 'ruby_perf.jpg',
+  price: 55.95)
+  # . . .
+
+Product.create(title: 'Deploying with JRuby 9k',
+  description:
+        %{<p>
+            <em>Deploying with JRuby 9k</em> Deploy using the JVM’s high
+            performance while building your apps in the language you love.
+            This book introduces you to three JRuby deployment strategies that
+            give you the performance and scalability you need.
+          </p>},
+  image_url: 'jruby.jpg',
+  price: 89.95)
+# . . .
+
+Product.create(title: 'Rails, Angular, Postgres, and Bootstrap',
+  description:
+        %{<p>
+            <em>Rails, Angular, Postgres, and Bootstrap</em> Achieve awesome
+            user experiences and performance with simple, maintainable code!
+            Embrace the full stack of web development, from styling with
+            Bootstrap, building an interactive user interface with Angular 4.
+          </p>},
+  image_url: 'rails.jpg',
+  price: 89.95)

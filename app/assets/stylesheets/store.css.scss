@@ -2,49 +2,85 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 .store {
-h1 {
- margin: 0;
- padding-bottom: 0.5em;
- font: 150% sans-serif;
-color: #226;
- border-bottom: 3px dotted #77d;
- }
+  h1 {
+   margin: 0;
+   padding-bottom: 0.5em;
+   font: 150% sans-serif;
+   color: #226;
+
+  }
 
  /* An entry in the store catalog */
- .entry {
- overflow: auto;
- margin-top: 1em;
- border-bottom: 1px dotted #77d;
- min-height: 100px;
+.table-wrap {
 
- img {
- width: 80px;
- margin-right: 5px;
- margin-bottom: 5px;
- position: absolute;
- }
 
- h3 {
- font-size: 120%;
- font-family: sans-serif;
-  margin-left: 100px;
-   margin-top: 0;
- margin-bottom: 2px;
- color: #227;
- }
+  .entry {
+     width: 25%;/* again, adjust the percentage to fit with the margins and and borders %*/
+    //  display: table-cell;
+     background-color: #F4F6F6;
+    //  padding: 0 10px 30px;
+     box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+     position: relative;
+     text-align: left;
+     display: inline-block;
+     padding: inherit;
+     height: 400px;
 
- p, div.price_line {
- margin-left: 100px;
- margin-top: 0.5em;
- margin-bottom: 0.8em;
- }
- form, div {
-   display: inline;
- }
- .price {
-    color: #44a;
- font-weight: bold;
- margin-right: 3em;
- }
- }
+
+
+
+    .image {
+        padding-top: 10px;
+        width: 90%;
+        margin: 0 auto;
+        height: 200px;
+        margin-bottom: 10px;
+
+      }
+      .copy{
+        width: 90%;
+        margin: 0 auto;
+      p {
+        text-align: left;
+
+        }
+      }
+}
+    //  img {
+    //    width: 80px;
+    //    margin-right: 5px;
+    //    margin-bottom: 5px;
+    //    position: absolute;
+    //   }
+
+     h3 {
+       font-size: 120%;
+       font-family: sans-serif;
+
+       margin-top: 0;
+       margin-bottom: 2px;
+       color: #227;
+     }
+
+      div.price_line {
+       margin-top: 0.5em;
+       margin-bottom: 0.8em;
+       bottom: 0;
+       position: absolute;
+       left: 0;
+       right: 0;
+       text-align: center;
+       height: 20px;
+
+       form, div {
+         display: inline;
+       }
+     }
+
+     .price {
+        color: #44a;
+        font-weight: bold;
+        margin-right: 3em;
+     }
+   }
  }

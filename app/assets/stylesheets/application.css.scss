@@ -13,19 +13,70 @@
  *= require_self
  *= require_tree .
  */
+ body * {
+    margin: 0;
+    padding: 0;
+  }
+ #container {
+   max-width:  1300px; /*whole page will go no wider than this*/
+   width:  100%; /*will go to max width but will also be responsive*/
+   margin: 0 auto; /* auto gives equal margin on either side when it does not fill entire screen, so centres it*/
+ }
 
-#banner {
-  background: #9c9;
-  padding: 10px;
-  border-bottom: 2px solid;
-  font: small-caps 40px/40px "Times New Roman", serif;
-  color: #282;
-  text-align: center;
+ #header {
+   height: 50px;
+   background-color: #F4F6F6;
+   padding: 10px;
+ }
+
+ #banner {
+   background-image: url("banner.jpeg");
+   background-repeat: no-repeat;
+   //background: #CACFD2;
+   //border-bottom: 2px solid
+   font-size: small-caps 40px/40px "Times New Roman", serif;
+   color: #282;
+   text-align: center;
+   background-size: 1300px 400px;
+   height: 400px;
+   background-position:center;
+
+
+   #side {
+     height: 100px;
+   ul {
+     padding: 0;
+     margin: 0;
+     padding: 0;
+     overflow: hidden;
+    //  width: 80%;
+     text-align: center;
+
+     li {
+       list-style: none;
+       display: inline-block;
+       width: 100px;
+
+
+       a {
+         color: white;
+         font-size: 20px;
+         text-decoration: none;
+         font-family: "Roboto", sans-serif;
+         font-style: normal;
+          }
+         }
+       }
+     }
+   }
+   set_locale {
+     float: right;
+     margin: -0.25em 0.1em;
+     padding-right: .5px;
 
   img {
     float: left;
   }
-}
 
 #notice {
   color: #000 !important;
@@ -37,24 +88,26 @@
 }
 
 #columns {
-  background: #141;
+  background: #F4F6F6;
 
   #main {
-    margin-left: 17em;
+    // margin-left: 17em;
     padding: 1em;
-    background: white;
-  }
+    background: #EAEDED;
+    .table-wrap{
+      // display: table-row;
+      border-collapse: separate;
+      border-spacing: 40px 0;
 
-  #side {
-    float: left;
-    padding: 1em 2em;
-    width: 13em;
-    background: #141;
- #time {
-   color: #bfb;
+    }
+  }
+ }
+  #time {
+   color: slategrey;
 
   form, div {
     display: inline;
+
   }
 
   input {
@@ -69,21 +122,12 @@ table {
   border-top: 1px dotted #595;
   border-bottom: 1px dotted #595;
   margin-bottom: 10px;
+th, td {
+  padding-right: 20px;
+}
 }
  }
 
-    ul {
-      padding: 0;
-      li {
-        list-style: none;
-        a {
-          color: #bfb;
-          font-size: small;
-        }
-      }
-    }
-  }
-}
 .depot_form {
   fieldset {
     background: #efe;
@@ -120,7 +164,18 @@ table {
   }
 }
 
-.locale {
-  float: right;
-  margin: -0.25em 0.1em;
+
+  #logout{
+    float: right;
+    margin: -0.25em 0.1em;
+    padding-right: 10px;
+  }
+
 }
+#footer {
+        text-align: right;
+        color: slategrey;
+        border-top: 1px solid grey;
+        padding: 20px 10px;  /* this is the short hand way of doing padding or margin, this is top/bottom left/right, or you go clockwise starting from top *px *px *px *px %*/
+        margin-top: 40px;
+      }
