@@ -32,7 +32,7 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'rails_12factor', group: :production
 
 
-gem 'pg', group: :production
+gem 'pg', '~> 0.20.0', group: :production
 gem 'sqlite3', group: :development
 # Use ActiveModel has_secure_password
 
