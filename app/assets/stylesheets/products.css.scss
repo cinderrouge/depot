@@ -1,6 +1,7 @@
 // Place all the styles related to the Products controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
 h1{
   font-weight: bold;
 }
@@ -34,6 +35,7 @@ h1{
 
     dd {
       margin: 0;
+
     }
   }
 
@@ -41,6 +43,7 @@ h1{
     font-size:    x-small;
     text-align:   right;
     padding-left: 1em;
+
   }
 
   .list_line_even {
@@ -49,4 +52,13 @@ h1{
   .list_line_odd {
     background:   #dee4e8;
   }
+
+.create [type="submit"]{
+  margin-top: 10px;
+  color: black;
+  background-color: #AEB3B6;
+  border-radius: 8px;
+  width: 15%;
+  padding: 5px;
+}
 }
