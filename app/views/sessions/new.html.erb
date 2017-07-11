@@ -5,10 +5,10 @@
 
    <%= form_tag do %>
     <fieldset id="login_form">
-       
+
       <div id="name">
         <%= label_tag :name, 'Name:' %>
-        <%= text_field_tag :name, params[:name] %>
+        <%= text_field_tag :name, params[:name] autofocus: true %>
       </div>
 
       <div id="password">

@@ -84,3 +84,6 @@ Product.create(title: 'Rails, Angular, Postgres, and Bootstrap',
           </p>},
   image_url: 'rails.jpg',
   price: 89.95)
+# . . .
+
+User.create(name: 'Admin', password_digest: 'password1', password_confirmation: 'password1')
