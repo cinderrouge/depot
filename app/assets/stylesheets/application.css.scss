@@ -65,7 +65,13 @@
        display: inline-block;
        width: 100px;
 
-
+ input {
+   padding: 5px;
+ }
+    &:last-of-type {
+        float: right;
+        padding: 10px 10px;
+      }
        a {
          color: white;
          font-size: 20px;
@@ -77,12 +83,12 @@
        }
      }
    }
-   set_locale {
-     float: right;
-     margin: -0.25em 0.1em;
-     padding-right: .5px;
+  //  set_locale {
+  //    float: right;
+  //    margin: -0.25em 0.1em;
+  //    padding-right: .5px;
 
-}
+// }
   img {
     float: left;
   }

@@ -30,14 +30,17 @@
                  <%= button_to 'Logout', logout_path, method: :delete   %>
               </li><!-- logout-->
             <% end %>
-          </ul>
-           <%= form_tag store_path, class: 'locale' do %>
+
+            <li>
+              <%= form_tag store_path, class: 'locale' do %>
               <%= select_tag 'set_locale',
                options_for_select(LANGUAGES, I18n.locale.to_s),
                onchange: 'this.form.submit()' %>
               <%= submit_tag 'submit' %>
               <%= javascript_tag "$('.locale input').hide()" %>
-           <% end %><!--form -->
+            <% end %><!--form -->
+          </li>
+        </ul>
        </div><!-- side -->
        <!-- <%= @page_title || t('.title') %> -->
 
