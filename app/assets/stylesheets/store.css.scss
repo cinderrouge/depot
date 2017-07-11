@@ -7,39 +7,59 @@
    padding-bottom: 0.5em;
    font: 150% sans-serif;
    color: #226;
-
-  }
-
+}
+ #main h1 {
+   text-align: center;
+   color: #46484A
+ }
  /* An entry in the store catalog */
 .table-wrap {
-
+    display: flex;
+  	flex-flow: row wrap;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    width:  100%;
+    justify-content: center;
 
   .entry {
+    // display: flex;
      width: 25%;/* again, adjust the percentage to fit with the margins and and borders %*/
-    //  display: table-cell;
+     padding-bottom: 25px;
+     margin:  10px 2% 100px;
+     box-sizing: border-box;
      background-color: #F4F6F6;
-    //  padding: 0 10px 30px;
+     padding: 0 10px 60px;
      box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
      position: relative;
      text-align: left;
-     display: inline-block;
-     padding: inherit;
      height: 400px;
 
+    input {
+        box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+      }
 
 
 
     .image {
         padding-top: 10px;
-        width: 90%;
-        margin: 0 auto;
+
         height: 200px;
         margin-bottom: 10px;
+        img{
+          margin: 0 auto;
+          display: block;
+          width: 100%;
+          max-width: 150px;
+        }
+
 
       }
       .copy{
         width: 90%;
         margin: 0 auto;
+
+
       p {
         text-align: left;
 
@@ -74,6 +94,8 @@
 
        form, div {
          display: inline;
+
+
        }
      }
 

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
  <head>
-   <title>Pragprog Books Online Store</title>
+   <title>The Book Depot</title>
  <%= stylesheet_link_tag "application", media: "all",
        "data-turbolinks-track" => true %>
  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
@@ -12,47 +12,47 @@
    <div id="container">
      <div id="banner">
        <div id="side">
-         <div id="cart">
+         <div id="shopping-cart">
            <% if @cart %>
               <%= hidden_div_if(@cart.line_items.empty?, id: 'cart') do %>
                 <%= render @cart %>
                <% end %>
            <% end %>
-         </div>
-          <ul>
+         </div> <!-- cart -->
+         <ul>
             <li><%= link_to 'Home', store_path  %></li>
             <li><%= link_to 'Admin', login_path %></a></li>
-
-          <% if session[:user_id] %>
-             <li><%= link_to 'Orders',   orders_path   %></li>
-             <li><%= link_to 'Products', products_path %></li>
-             <li><%= link_to 'Users',    users_path    %></li>
-           </ul>
-           <div id="logout">
-            <%= button_to 'Logout', logout_path, method: :delete   %>
-             <% end %>
-           </div>
-       <%= form_tag store_path, class: 'locale' do %>
-          <%= select_tag 'set_locale',
-           options_for_select(LANGUAGES, I18n.locale.to_s),
-           onchange: 'this.form.submit()' %>
-          <%= submit_tag 'submit' %>
-          <%= javascript_tag "$('.locale input').hide()" %>
-       <% end %>
-      </div>
+            <% if session[:user_id] %>
+               <li><%= link_to 'Orders',   orders_path   %></li>
+               <li><%= link_to 'Products', products_path %></li>
+               <li><%= link_to 'Users',    users_path    %></li>
+               <li id="logout">
+                 <%= button_to 'Logout', logout_path, method: :delete   %>
+              </li><!-- logout-->
+            <% end %>
+          </ul>
+           <%= form_tag store_path, class: 'locale' do %>
+              <%= select_tag 'set_locale',
+               options_for_select(LANGUAGES, I18n.locale.to_s),
+               onchange: 'this.form.submit()' %>
+              <%= submit_tag 'submit' %>
+              <%= javascript_tag "$('.locale input').hide()" %>
+           <% end %><!--form -->
+       </div><!-- side -->
        <!-- <%= @page_title || t('.title') %> -->
 
         <!-- <%= image_tag("logo.png") %> -->
       </div><!-- banner end -->
       <div id="columns">
-      <div id="main">
-          <%= yield %>
-      </div>
+        <div id="main">
+            <%= yield %>
+        </div><!-- main -->
     </div><!-- columns end -->
   </div><!-- container end -->
   <div id= "footer">
       &copy; Marlene Reddy
-     <div id="time"> <%= DateTime.now.strftime('%d/%m/%Y') %>
+     <div id="time">
+       <%= DateTime.now.strftime('%d/%m/%Y') %>
      </div>
   </div>
  </body>
